@@ -1,0 +1,19 @@
+<div>
+
+  <p>Enter a number between 1 and 100</p>
+
+  <div><input type="text" [(ngModel)]="inputNumber" /></div>
+
+  <div><input type="button" value="Generate" (click)="generatePrimes()" /></div>
+
+  <div *ngIf="errorMessage.length > 0">Error: {{ errorMessage }}</div>
+
+  <div *ngIf="output.length > 0">
+
+    <div>The calculated primes are:</div>
+
+    <div>{{ output.join(', ') }}</div>
+
+  </div>
+
+</div>
